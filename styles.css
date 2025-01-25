@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'MayfairNbpBold';
+    src: url('/fonts/MayfairNbpBold-gAA4.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'MayfairNbpBold', 'Mayfair', sans-serif;
+}
+
+body {
+    font-family: 'MayfairNbpBold', 'Mayfair', sans-serif;
+    padding: 0;
+    margin: 0;
+    color: rgb(151, 210, 150);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    font-size: 16px;
+    height: 100vh;
+    line-height: 1.5;
+    background-color: black;
+}
+
+.floating-text {
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    opacity: 1;
+    transition: opacity 10s ease, transform 10s ease;
+    pointer-events: none;
+    z-index: 1000;
+    text-align: center;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+.text-box {
+    padding: 0;
+    margin: 0;
+    color: rgb(151, 210, 150);
+    display: flex;
+    justify-content: flex-start; /* Align text to the left */
+    align-items: flex-start;
+    line-height: 1.5;
+    background-color: transparent; /* Set background to transparent */
+    width: 100%;
+    text-align: left; /* Align text to the left */
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+.option-buttons {
+    margin-top: 20px;
+    width: 100%;
+    display: inline-block;
+    flex-direction: column;
+    align-items: left;
+    left: 200px;
+    position: relative; /* Position buttons absolutely */
+    bottom: 10px; /* Position at the bottom */
+    left: 10px; /* Position at the left */
+}
+
+.option-buttons button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: transparent; /* Set background color */
+    color: white;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.option-buttons button:hover {
+    background-color: #0e531e;
+}
+
+#input-container {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#input-container input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+}
+
+#input-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important; /* Use !important to ensure it overrides other styles */
+}
+
+#equipment-menu {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+#equipment-menu {
+    top: 50px;
+    left: 50px;
+}

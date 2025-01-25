@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuaneQuest</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="=duane.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="game-container">
+        <div id="text" class="text-box"></div>
+        <div id="option-buttons" class="option-buttons"></div>
+        <div id="input-container" class="hidden">
+            <input type="text" id="player-input">
+            <button id="submit-button">Submit</button>
+        </div>
+    </div>
+    <div id="stats" class="stats">
+        <p>HP: <span id="hp">100</span></p>
+        <p>Mana: <span id="mana">50</span></p>
+        <p>STR: <span id="str">10</span> <button id="increase-str" class="increase-btn" onclick="increaseStat('str')">+</button></p>
+        <p>CHA: <span id="cha">10</span> <button id="increase-cha" class="increase-btn" onclick="increaseStat('cha')">+</button></p>
+        <p>DEX: <span id="dex">10</span> <button id="increase-dex" class="increase-btn" onclick="increaseStat('dex')">+</button></p>
+        <p>INT: <span id="int">10</span> <button id="increase-int" class="increase-btn" onclick="increaseStat('int')">+</button></p>
+        <p>LVL: <span id="level">1</span></p>
+        <p>XP: <span id="xp">0</span></p>
+        <p>Required XP: <span id="requiredXp">10</span></p>
+        <p>Stat Points: <span id="stat-points">0</span></p>
+        <div class="button-container">
+            <button id="equipment-button" onclick="openEquipmentMenu()" style="display: none;">Equipment</button>
+        </div>
+    </div>
+    <div id="equipment-menu" class="hidden">
+        <ul id="equipment-list"></ul>
+        <button onclick="closeEquipmentMenu()">Close</button>
+    </div>
+    <audio id="click-sound" src="audio/click.mp3" preload="auto"></audio>
+    <audio id="start-sound" src="audio/Duane_Song.mp3" preload="auto"></audio>
+    <audio id="forest-sound" src="audio/ElwynnForest.mp3" preload="auto"></audio>
+    <audio id="suburb-sound" src="audio/Onett.mp3" preload="auto"></audio>
+    <script src="game.js"></script>
+</body>
+</html>
